@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATEGORIES</title>
+    <link rel="icon" href="logo1.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        .top {
+            background-color: rgb(3, 150, 140);
+            display: flex;
+            color: white;
+            padding: 10px;
+            align-items: center;
+        }
+
+        .top h2 {
+            margin-left: 20px;
+        }
+
+        .product-container {
+            margin-top: 20px;
+        }
+
+        .search-box {
+            width: 80%;
+            border: solid black 2px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: auto
+        }
+
+        .search-box input {
+            border: none;
+            background-color: transparent;
+            width: 100%;
+        }
+
+        .search-box input:focus {
+            outline: none;
+        }
+
+        .products {
+            display: flex;
+            padding: 20px;
+            gap: 10px;
+            flex-wrap: wrap;
+
+
+        }
+
+        .product {
+            text-align: center;
+            flex-basis: 20%;
+            flex-grow: 1;
+        }
+
+        nav {
+            height: 60px;
+            background-color: transparent;
+            display: flex;
+            justify-content: flex-end;
+            align-items: ceter;
+            color: white;
+
+
+        }
+
+        .close {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: white;
+        }
+
+        nav .homes {
+            margin-left: auto;
+        }
+
+        nav a {
+            height: 100%;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+
+        }
+
+        nav a:hover {
+            background-color: rgb(91, 199, 243);
+        }
+
+        .open {
+            color: white;
+            display: none;
+            padding: 20px;
+        }
+
+        #sidebar {
+            display: none;
+        }
+
+        .closebtn {
+            color: white;
+            display: none;
+            padding: 20px;
+        }
+
+        @media screen and (max-width:600px) {
+            .close {
+
+                flex-direction: column;
+                align-items: flex-start;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 300px;
+                background-color: rgb(235, 101, 219);
+                z-index: 10;
+                transition: 0.75s ease-out;
+
+            }
+
+            nav a {
+                box-sizing: border-box;
+                height: auto;
+                width: 100%;
+                padding: 20px 30px;
+                
+            }
+
+            .closebtn {
+                display: block;
+                font-size: 30px;
+            }
+            
+
+            .open {
+                display: block;
+                font-size: 30px;
+            }
+
+            #sidebar:checked~.close {
+                right: 0;
+            }
+            .top{
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <img src="logo2.webp" width="200px" height="60px">
+        <nav>
+            <input type="checkbox" id="sidebar">
+            <label for="sidebar" class="open">
+                <i class="fa-solid fa-bars" id="menu"></i>
+            </label>
+
+            <div class="close">
+                <label for="sidebar" class="closebtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <a href="home.html">HOME</a>
+                <a href="cat.html">CATEGORIES</a>
+                <a href="#">CONTACT</a>
+
+            </div>
+
+        </nav>
+    </div>
+    <div class="product-container">
+        <form class="search-box">
+            <input type="text" id="p-search" placeholder="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+        <div class="products" id="products">
+            <div class="product">
+                <img src="c1.jpg" width="200px" height="200px">
+                <p>Kurtis</p>
+            </div>
+            <div class="product">
+                <img src="c2.jpg" width="200px" height="200px">
+                <p>Lehanga</p>
+            </div>
+            <div class="product">
+                <img src="c3.jpg" width="200px" height="200px">
+                <p>Sarees</p>
+            </div>
+            <div class="product">
+                <img src="c4.jpg" width="200px" height="200px">
+                <p>Western</p>
+            </div>
+            <div class="product">
+                <img src="c5.jpg" width="200px" height="200px">
+                <p>Shirts</p>
+            </div>
+            <div class="product">
+                <img src="c6.jpg" width="200px" height="200px">
+                <p>T-Shirts</p>
+            </div>
+            <div class="product">
+                <img src="c7.jpg" width="200px" height="200px">
+                <p>Trousers</p>
+            </div>
+            <div class="product">
+                <img src="c8.jpg" width="200px" height="200px">
+                <p>Jeans</p>
+            </div>
+            <div class="product">
+                <img src="c10.jpg" width="200px" height="200px">
+                <p>Traditional</p>
+            </div>
+            <div class="product">
+                <img src="c9.jpg" width="200px" height="200px">
+                <p>Kids</p>
+            </div>
+            <div class="product">
+                <img src="c11.jpg" width="200px" height="200px">
+                <p>Jumbsuits</p>
+            </div>
+            <div class="product">
+                <img src="c12.jpg" width="200px" height="200px">
+                <p>Skirts</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var product = document.querySelector(".products")
+        var search = document.getElementById("p-search")
+        var productlist = product.querySelectorAll("div")
+
+        search.addEventListener("keyup", function () {
+            var entered = event.target.value.toUpperCase()
+            for (var i = 0; i < productlist.length; i++) {
+                if (productlist[i].textContent.toUpperCase().indexOf(entered) < 0) {
+                    productlist[i].style.display = "none"
+                }
+                else {
+                    productlist[i].style.display = "block"
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

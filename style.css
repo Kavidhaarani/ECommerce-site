@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Source code Pro;
+}
+
+header {
+    display: flex;
+    background-color: rgb(48, 46, 46);
+    color: white;
+    padding: 10px;
+    justify-content: space-around;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+}
+
+.head {
+    display: flex;
+}
+
+.left {
+    display: flex;
+
+}
+
+nav {
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+
+}
+
+.close {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+}
+
+nav .homes {
+    margin-left: auto;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+
+}
+
+nav a:hover {
+    background-color: rgb(103, 227, 240);
+}
+
+.open {
+    color: white;
+    display: none;
+    padding: 20px;
+}
+
+#sidebar {
+    display: none;
+}
+
+.closebtn {
+    color: #ffff;
+    display: none;
+    padding: 20px;
+}
+
+.but {
+    padding: 100px;
+}
+
+h1 {
+    padding: 10px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.button {
+    margin: 30px;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: rgb(115, 91, 221);
+    color: white;
+}
+
+#butt {
+    color:white;
+    margin-left: 30px;
+    background-color: rgb(62, 60, 62);
+    padding: 10px;
+    border-radius: 10px;
+}
+.wish{
+    display: flex;
+}
+.wish i{
+    color: white;
+    margin-left: 1px;
+}
+
+.contain {
+    background-image: url(model1.avif);
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+    height: 500px;
+}
+
+.icon i {
+    color: white;
+    margin-left: 10px;
+}
+
+
+.sign {
+    background-color: white;
+    color: black;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.dress {
+    border: 2px solid black;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.dress h3 {
+    color: rgb(73, 70, 70);
+}
+
+.dress h2 {
+    color: rgb(73, 70, 70);
+    font-size: small;
+}
+
+.dress p {
+    color: rgb(73, 70, 70);
+    margin-bottom: 10px;
+}
+
+.star {
+    border: 1px solid black;
+    width: 50px;
+    border-radius: 10px;
+    background-color: rgb(247, 155, 170);
+    padding: 5px;
+    color: white;
+    display: flex; 
+    height: 30px;
+}
+.star i{
+    margin-top: 3px;
+}
+
+.search {
+    border: 1px solid white;
+    background-color: transparent;
+    display: flex;
+    height: 30px;
+    margin-left: 30px;
+}
+
+.search i {
+    color: white;
+}
+
+.search input {
+    width: 200px;
+    height: 25px;
+}
+
+.icon {
+    display: flex;
+    margin-top: 10px;
+
+}
+
+.footer {
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+    height: 100px;
+    justify-content: space-around;
+    background-color: rgb(147, 249, 242);
+}
+
+.email {
+    display: flex;
+    border: 1px solid gray;
+    width: 300px;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    justify-content: space-around;
+}
+
+.footer p {
+    margin-top: 20px;
+}
+
+.int {
+    border: none;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+}
+.jo:hover{
+    background-color: rgb(235, 117, 158);
+}
+.jo{
+    color: black;
+    background-color: transparent;
+    border: none;
+    cursor:pointer;
+    width: 100%;
+}
+
+.email h5 {
+    justify-content: flex-end;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.media i {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+@media screen and (max-width:600px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .dress {
+        flex-basis: 30%;
+    }
+
+    .contain {
+        background-size: contain;
+    }
+
+    .left img {
+        width: 100px;
+        height: 20px;
+    }
+
+    .head {
+        display: none;
+    }
+
+    .sign {
+        margin-left: 10px;
+    }
+
+    #menu {
+        margin-left: 150px;
+    }
+
+    .footer {
+        display: block;
+        height: 200px;
+        text-align: center;
+    }
+
+    .email {
+        margin-left: 80px;
+    }
+
+    .close {
+
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        background-color: rgb(220, 150, 226);
+        z-index: 10;
+        transition: 0.75s ease-out;
+
+    }
+
+    nav a {
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+
+    .closebtn {
+        display: block;
+        font-size: 30px;
+    }
+
+    .open {
+        display: block;
+        font-size: 30px;
+    }
+
+    #sidebar:checked~.close {
+        right: 0;
+    }
+}

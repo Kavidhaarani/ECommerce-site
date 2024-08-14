@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+    <link rel="icon" href="logo1.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <Style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(back.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .head {
+            background-color: rgb(17, 224, 211);
+            padding: 10px;
+        }
+
+        .log {
+            width: 600px;
+            height: 400px;
+            border-radius: 20px;
+            background-color: white;
+        }
+
+        .input {
+            color: rgb(169, 168, 168);
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            width: 300px;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: rgb(17, 224, 211);
+            padding: 10px;
+            border-radius: 10px;
+            width: 200px;
+            margin-top: 20px;
+            color: white;
+        }
+
+        .top {
+            background-color: rgb(3, 150, 140);
+            display: flex;
+            color: white;
+            padding: 10px;
+            align-items: center;
+        }
+
+        .top h2 {
+            margin-left: 20px;
+        }
+        nav{
+            height: 60px;
+            background-color: transparent;
+            display: flex;
+            justify-content: flex-end;
+            align-items: ceter;
+            
+            
+        }
+        .close{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: white;
+        }
+        nav .homes{
+            margin-left: auto;
+        }
+        nav a{
+            height: 100%;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            
+        }
+        nav a:hover{
+            background-color: rgb(104, 228, 240);
+        }
+        
+        .open{
+            color: white;
+            display: none;
+            padding:  20px;
+        }
+        #sidebar{
+            display: none;
+        }
+        .closebtn{
+            color:white;
+            display: none;
+            padding: 20px;
+        }
+        @media screen and (max-width:600px) {
+           .close{
+            
+            flex-direction: column;
+            align-items: flex-start;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 300px;
+            background-color: rgb(239, 113, 224);
+            z-index: 10;
+            transition: 0.75s ease-out;
+
+           } 
+           nav a{
+           box-sizing: border-box;
+           height: auto;
+           width: 100%;
+           padding: 20px 30px;
+           justify-content: flex-start;
+        }
+        .closebtn{
+            display: block;
+            font-size: 30px;
+        }
+        .open{
+            display: block;
+            font-size: 30px;
+        }
+        #sidebar:checked ~ .close{
+            right: 0;
+        }
+        .top{
+            justify-content: space-between;
+        }
+        body{
+            background-size: cover;
+            height:800px;
+        }
+        .log{
+            width: 450px;
+            height: 400px;
+        }
+        }
+    </Style>
+</head>
+
+<body>
+    <div class="top">
+        <img src="logo2.webp" width="200px" height="60px">
+        <nav>
+            <input type="checkbox" id="sidebar">
+            <label for="sidebar" class="open">
+                <i class="fa-solid fa-bars" id="menu"></i>
+            </label>
+
+            <div class="close">
+                <label for="sidebar" class="closebtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <a href="home.html">HOME</a>
+                <a href="cat.html">CATEGORIES</a>
+                <a href="#">CONTACT</a>
+
+            </div>
+
+        </nav>
+    </div>
+    <center>
+        <div class="log">
+            <div class="head">
+                <p>Pantaloon <b>Sale</b> is here! Get Upto <b>50%</b>Off + <b>Extra Rs.1500</b>Off* on order value of
+                    Rs.5999,Code: SALE1500</p>
+            </div>
+            <h1 style="font-style: italic;font-weight: lighter; margin-top: 10px;">Login/Register</h1>
+            <p style="color: gray;margin-top: 30px;">Enter Name*</p>
+            <input type="text" placeholder="Name" class="input">
+            <p style="color: gray;margin-top: 30px;">Enter Mobile Number*</p>
+            <input type="text" placeholder="Mobile Number" class="input"><br>
+            <button type="button">Get OTP</button>
+
+        </div>
+    </center>
+</body>
+
+</html>

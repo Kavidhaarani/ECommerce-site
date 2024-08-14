@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN IN</title>
+    <link rel="icon" href="logo1.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="script.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(background.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .top {
+            background-color: rgb(3, 150, 140);
+            display: flex;
+            color: white;
+            padding: 10px;
+            align-items: center;
+        }
+
+        .top h2 {
+            margin-left: 20px;
+        }
+
+        .login {
+            border: 1px solid white;
+            height: 250px;
+            width: 450px;
+            background-color: white;
+        }
+
+        .inputs {
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        label {
+            padding: 20px;
+        }
+
+        input {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .for a {
+            padding-left: 50px;
+        }
+
+        .button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100px;
+            background-color: rgb(160, 211, 245);
+            border-radius: 10px;
+        }
+
+        .hr {
+            display: flex;
+            margin-top: 70px;
+            padding-left: 70px;
+        }
+
+        nav {
+            height: 60px;
+            background-color: transparent;
+            display: flex;
+            justify-content: flex-end;
+            align-items: ceter;
+
+
+        }
+
+        .close {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: white;
+        }
+
+        nav .homes {
+            margin-left: auto;
+        }
+
+        nav a {
+            height: 100%;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+
+        }
+
+        nav a:hover {
+            background-color: rgb(104, 228, 240);
+        }
+
+        .open {
+            color: white;
+            display: none;
+            padding: 20px;
+        }
+
+        #sidebar {
+            display: none;
+        }
+
+        .closebtn {
+            color: white;
+            display: none;
+            padding: 20px;
+        }
+
+        @media screen and (max-width:600px) {
+            .close {
+
+                flex-direction: column;
+                align-items: flex-start;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 300px;
+                background-color: rgb(239, 113, 224);
+                z-index: 10;
+                transition: 0.75s ease-out;
+
+            }
+
+            nav a {
+                box-sizing: border-box;
+                height: auto;
+                width: 100%;
+                padding: 20px 30px;
+                justify-content: flex-start;
+            }
+
+            .closebtn {
+                display: block;
+                font-size: 30px;
+            }
+
+            .open {
+                display: block;
+                font-size: 30px;
+            }
+
+            #sidebar:checked~.close {
+                right: 0;
+            }
+
+            .top {
+                justify-content: space-between;
+            }
+            body{
+                background-size:cover;
+                height: 700px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <img src="logo2.webp" width="200px" height="60px">
+        <nav>
+            <input type="checkbox" id="sidebar">
+            <label for="sidebar" class="open">
+                <i class="fa-solid fa-bars" id="menu"></i>
+            </label>
+
+            <div class="close">
+                <label for="sidebar" class="closebtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <a href="index.html">HOME</a>
+                <a href="#">ABOUT US</a>
+                <a href="#">CONTACT</a>
+
+            </div>
+
+        </nav>
+    </div>
+    <center>
+        <img src="logo.png" width="150px" height="100px">
+        <div class="login">
+            <div class="inputs">
+                <label>Username</label>
+                <input type="text" placeholder="Enter Username" id="username" required=""><br>
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password" id="password"><br>
+                <div class="for">
+                    <input type="checkbox" name="box">Remember me
+                    <a href="login.html">Forgot Password</a>
+                </div>
+                <button class="button" onclick="check()">Sign-in</button>
+            </div>
+            <div class="hr">
+                <hr style="width: 100px;margin-top: 10px;border: 1px solid gray;height: 0;">New to Pantaloons
+                <hr style="width: 100px;margin-top: 10px;border: 1px solid gray;height: 0;">
+            </div>
+            <a href="#"><input type="button" value="Create Your Account"
+                    style="background-color: transparent;color: rgb(81, 81, 244);width: 300px; margin-top: 20px;"></a>
+            </table>
+        </div>
+    </center>
+
+
+</body>
+
+</html>
